@@ -1,7 +1,7 @@
 (ns clojure-programming-exercises.core-test
-  (:require [clojure.test :refer :all]
-            [clojure-programming-exercises.core :refer :all]))
+  (:require [midje.sweet :refer :all])
+  (:require [clojure-programming-exercises.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+
+(fact "I can make a test pass"
+      1 => 1)
