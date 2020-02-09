@@ -12,7 +12,7 @@
  "III"   3
  "IV"    4
  "L"     50
- "LXIV"  62
+ "LXIV"  64
  "XLII"  42
  "MCMXLIV" 1944)
 
@@ -29,11 +29,11 @@
  "M"     1000)
       
 (tabular
- (fact "We can convert roman pairs into ints"
-       (get-roman-pair-value ?a ?b) => ?res)
+ (fact "We subtract if the first number is smaller than the second"
+       (subtract-if-smaller [?a ?b]) => ?res)
  ?a   ?b   ?res
- "I"  "V"  4
- "V"  "I"  5
- "I"  "I"  1
- "X"  "C"  90
- "I"  "X"  9)
+ 1    5    -1
+ 5    1    5
+ 1    1    1
+ 10   100  -10
+ 1    10   -1)
